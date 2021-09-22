@@ -1,0 +1,180 @@
+<nav class="navbar navbar-expand-lg navbar-light  fundo-menu" style="height: 4rem;">
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado"
+        aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+
+
+
+    <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
+
+        <div class="col-md-4">
+            <ul class="navbar-nav mr-auto d-flex align-items-center">
+                <li class="nav-item active trans">
+                    <img src="../../assets/img/Soso/Soso sorrisao fundo.jpeg" alt="sorissao soso" width="100px"
+                        height="100px" class="img-fluid rounded-circle " routerLink='/home'>
+                </li>
+                <li class="nav-item ml-4">
+                    <i class="fas fa-search"></i>
+                    <form class="form-inline my-2 my-lg-0">
+                        <input style="width: 20rem; height:2rem ;" class="form-control mr-sm-2 radio fundoVerdinClarin"
+                            type="search" placeholder="Pesquisar " aria-label="Pesquisar">
+                        <i class="fas fa-search"></i>
+                    </form>
+                </li>
+
+            </ul>
+
+        </div>
+
+        <div class="col-md">
+
+        </div>
+
+        <div class="col-md-3 mr p-0 m-0 ">
+
+            <ul class="navbar-nav m-auto d-flex align-items-right mt-5 ">
+
+
+                <li class="nav-item p-30 ">
+                    <div class="trans" (mouseenter)="houverItemHome = true" (mouseleave)="houverItemHome = false">
+                        <img src="../../assets/img/icones/1.png" alt="icone home " width="70px" height="40px"
+                            routerLink='/home' class="radios">
+                        <div class="visibility-home-false" [ngClass]="{'visibility-home': houverItemHome}">
+                            <span class="d-flex justify-content-center" style="color: #CAEDBA;">Home</span>
+                        </div>
+
+
+                    </div>
+
+                </li>
+
+                <li class="nav-item p-30">
+
+                    <div class="trans" (mouseenter)="houverItemOng = true" (mouseleave)="houverItemOng = false">
+                        <img src="../../assets/img/icones/2.png" alt="icone ong's" width="70px" height="40px"
+                            class="radios" [routerLink]="['/home']">
+
+                        <div class="visibility-ong-false" [ngClass]="{'visibility-ong': houverItemOng}">
+                            <span class="d-flex justify-content-center" style="color: #CAEDBA;">Posts</span>
+                        </div>
+                    </div>
+
+                </li>
+
+
+                <li class="nav-item p-30">
+
+                    <div class="trans" (mouseenter)="houverItemSalvo = true" (mouseleave)="houverItemSalvo = false">
+                        <img src="../../assets/img/icones/3.png" alt="icone salvar" width="70px" height="40px"
+                            class="radios" [routerLink]="['/home']">
+
+                        <div class="visibility-salvo-false" [ngClass]="{'visibility-salvo': houverItemSalvo}">
+                            <span class="d-flex justify-content-center" style="color: #CAEDBA;">Salvos</span>
+                        </div>
+
+                    </div>
+                </li>
+
+            </ul>
+        </div>
+
+        <div class="col-md">
+
+        </div>
+
+        <div class="col-md-3 p-0 m-0">
+
+            <div class="row d-flex align-items-center p-0">
+
+                <div class="col-md-3">
+
+                </div>
+
+                <div class="col-md-3 d-flex justify-content-center ">
+                    <ul class="navbar-nav ml-auto d-flex align-items-center text-center al mt-5" style="width: 3rem;">
+
+                        <li class="nav-item  dropdown m-10" style="margin-right: 130px; width: 15rem;">
+
+
+                            <a class="nav-link dropdown trans" id="navbarDropdown" role="button" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false" (mouseenter)="houverItemMenu = true"
+                                (mouseleave)="houverItemMenu = false"><img
+                                    style="width:87,5px; height:50px color-success" src="../../assets/img/icones/4.png"
+                                    alt="listbarras">
+                                <div class="visibility-menu-false" [ngClass]="{'visibility-menu': houverItemMenu}">
+                                    <span class="d-flex justify-content-center" style="color: #CAEDBA;">Menu</span>
+                                </div>
+
+                            </a>
+                            <div class="dropdown-menu  " aria-labelledby="navbarDropdown">
+                                <a [routerLink]="['/home']" class="dropdown-item img-fluid" href=""><img width="30px"
+                                        height="34px" src="../../assets/img/icones/usuario.png" alt=""> Conta</a>
+                                <a [routerLink]="['/home']" class="dropdown-item img-fluid " href=""><img width="30px"
+                                        height="34px" src="../../assets/img/icones/edit-user.png" alt=""> Editar
+                                    perfil</a>
+                                <a *ngIf='auth.Adm()' routerLink='/tema' class="dropdown-item" href="">
+                                    <img src="../../assets/img/icones/options-lines.png" width="30px" height="34px"
+                                        alt=""> Temas</a>
+
+
+                                <div class="dropdown-divider d-flex justify-content-start "></div>
+                                <a routerLink='/sobre-nos' class="dropdown-item " href="">
+
+                                    <img src="../../assets/img/Soso/Soso sorrisao fundo.jpeg" alt="" width="30px"
+                                        height="34px" class="img-fluid rounded-circle "> Sobre nós </a>
+
+                                <a class="dropdown-item" href="" routerLink='/contatos'> <img width="30px" height="34px"
+                                        src="../../assets/img/icones/telephone.png" alt="">Contatos</a>
+
+                                <div class="dropdown-divider"></div>
+                                <a (click)="sair()" class="dropdown-item" href=""><img width="30px" height="34px"
+                                        src="../../assets/img/icones/Saida.png" alt=""> Sair</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-md-3 trans mt-5">
+                    <a [routerLink]="['/home']" href="" (mouseenter)="houverItemNoti = true"
+                        (mouseleave)="houverItemNoti= false">
+                        <img class="mr-3" width="70px" height="40px" src="../../assets/img/icones/5.png" alt="">
+
+                        <div class="visibility-noti-false" [ngClass]="{'visibility-noti': houverItemNoti}">
+                            <span class="d-flex justify-content-center" style="color: #CAEDBA;">Avisos</span>
+                        </div>
+                    </a>
+
+
+                </div>
+
+
+                <div class="col-md-3 p-0 trans mt-5">
+                    <a [routerLink]="['/home']" href="" (mouseenter)="houverItemChat = true"
+                        (mouseleave)="houverItemChat = false">
+                        <img width="70px" height="40px" src="../../assets/img/icones/6.png" alt="">
+
+                        <div class="visibility-chat-false" [ngClass]="{'visibility-chat': houverItemChat}">
+                            <span class="d-flex justify-content-center" style="color: #CAEDBA;">Chat</span>
+                        </div>
+
+
+
+                    </a>
+                </div>
+
+
+
+
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+</nav>

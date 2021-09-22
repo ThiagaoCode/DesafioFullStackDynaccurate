@@ -1,0 +1,52 @@
+<div class=css-selector >
+
+
+    <div class="container-fluid text-white">
+        <div class="row ">
+            <div class="col-md-12">
+                <h1 class="fs-54 text-center"> Minhas Postagens</h1>
+                <h5 class="fs-18 text-center">Veja todos as suas Postagens:</h5>
+            </div>
+    
+    
+        </div>
+    
+    </div>
+    
+    
+    <div class="container-fluid ">
+     
+        <div class="row mt-3 d-flex justify-content-center">
+            <div class="col-md-8 ">
+                <table class="table table-hover radios ">
+                    <table class="table fundoForms radios ">
+                        <thead>
+                            <tr>
+                               
+                                <th scope="col">Tema</th>
+                                <th scope="col">Título</th>
+                                <th scope="col">Modificações</th>
+    
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let item of listaPostagem">
+                                
+                                <td>{{item.tema.categoria}}</td>
+                                <td>{{item.titulo}}</td>
+                                <td class="d-flex justify-content-end">
+                                    <button  class="btn lar mxr-7 radio fw-bold text-white" [routerLink]="['/postagem-edit',item.id]">Editar</button>
+                                    <button class="btn zul radio fw-bold text-white mxr-7" [routerLink]="['/postagem-delete',item.id]"  >Apagar</button>
+                                </td>
+    
+                            </tr>
+    
+                        </tbody>
+                    </table>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</div>
+

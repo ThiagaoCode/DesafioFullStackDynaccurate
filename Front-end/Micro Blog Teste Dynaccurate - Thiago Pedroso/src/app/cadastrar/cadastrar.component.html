@@ -1,0 +1,83 @@
+<div class="container-fluid css-selector w-100 ">
+    <div class="row d-flex align-items-center ">
+        <div class="col-md-6">
+
+            <img src="../../assets/img/imgThiagao/thi generation 02 IMG_2857.JPG" alt="Thi do cadastro" width="660px" height="660px">
+
+        </div>
+
+        <div class="col-md-4 mt-3 fundoForms radio ">
+            <div class="row justify-content-center">
+                <div class="col-md-10 ">
+                    <h1 class="text-center al mt-3 mb-3">
+                        Cadastro
+                    </h1>
+
+
+                    <div class="fw-bold mxr-150 al text-center">
+
+                        
+                        <label class="mxr-150">
+                            <input type="radio" name="options" (click)="selecionarRadio('Adm')">
+                            Administrador
+                            
+                        </label>
+                        <label>
+                            <input [(ngModel)]="usuario.tipo" type="radio" name="options" (click)="selecionarRadio('Normal')" >
+                            Normal
+                            
+                        </label> 
+
+                    </div> 
+
+                    <br>
+
+                    <div class="form-group">
+                       
+                        <input [(ngModel)]="usuario.nome" class="form-control radio fundoVerdinClarin fw-bold al" type="text"
+                            name="nome" id="nome" placeholder="Nome completo: ">
+                    </div>
+
+                    <div class="form-group">
+                        
+                        <input [(ngModel)]="usuario.usuario" class="form-control radio fundoVerdinClarin fw-bold al" type="text" name="email"
+                            id="usuario" placeholder="Usuario:">
+                    </div>
+
+                    <div class="form-group">
+                        
+                        <input [(ngModel)]="usuario.foto"class="form-control radio fundoVerdinClarin fw-bold al" type="text" name="foto" id="foto"
+                            placeholder="Link da sua foto:">
+                    </div>
+
+
+                    <div class="form-group">
+                       
+                        <input (input)='confirmSenha($event)' class="form-control radio fundoVerdinClarin fw-bold al" type="password" name="senha"
+                            id="senha" placeholder="Sua senha:">
+                    </div>
+
+                    <div class="form-group">
+                        
+                        <input [(ngModel)]="usuario.senha" class="form-control radio fundoVerdinClarin fw-bold al" type="password"
+                            name="confirmSenha" id="confirmSenha" placeholder="Confirme sua senha:">
+                    </div>
+
+                    <br>
+
+                    <div class="d-flex justify-content-center mb-4">
+                        <button type="submit" class="btn lar mxr-7 radio fw-bold text-white" routerLink='/entrar'>Cancelar</button>
+                        <button type="submit" class="btn zul radio fw-bold text-white" (click)="cadastrar()">Cadastrar</button>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+    </div>
+
+</div>

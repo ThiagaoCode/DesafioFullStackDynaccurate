@@ -1,0 +1,155 @@
+.fundo-menu{
+    background-color: #0F501D    ;
+}
+.p-30{
+    padding-left: 40px;
+}
+.radio{
+
+    border-radius: 35px 35px
+ }
+ .radios{
+    border-radius: 25px 25px 
+
+ }
+
+ .dropdown-menu {
+    width: 180px !important;
+    height: 300px !important;
+    background-color:#CAEDBA;
+    border-radius: 25px 25px 
+
+}
+
+.al{
+
+    color:#0F501D;
+  }
+
+.fundo-home{
+    background-color:#0F501D;
+}
+
+
+.css-selector {
+    background: linear-gradient(214deg, #103813, #0F501D, #7ed859);
+    background-size: 600% 600%;
+ 
+    -webkit-animation: AnimationName 8s ease infinite;
+    -moz-animation: AnimationName 8s ease infinite;
+    animation: AnimationName 8s ease infinite;
+ }
+ 
+ @-webkit-keyframes AnimationName {
+    0%{background-position:50% 0%}
+    50%{background-position:51% 100%}
+    100%{background-position:50% 0%}
+ }
+ @-moz-keyframes AnimationName {
+    0%{background-position:50% 0%}
+    50%{background-position:51% 100%}
+    100%{background-position:50% 0%}
+ }
+ @keyframes AnimationName {
+    0%{background-position:50% 0%}
+    50%{background-position:51% 100%}
+    100%{background-position:50% 0%}
+ }
+ 
+ 
+ .trans {
+    transition-property: background-color;
+    transition-duration: 1s;
+    transition-timing-function: ease-out;
+    border-radius: 9px;
+}
+.trans:hover {
+    background-color: #103813;
+    border-radius: 9px;
+}
+
+.elementos:hover{
+    border-radius: 8px;
+    bottom: 4px;
+    left: 0;
+    right: 0;
+    top: 4px;
+}
+
+.fundoVerdinClarin{
+
+    background-color: #CAEDBA;
+  
+}
+
+
+/*visibilidade nomes tokens menu*/
+.visibility-home{
+
+    visibility: visible!important;
+}
+
+.visibility-home-false{
+
+    visibility: hidden;
+}
+
+
+.visibility-ong{
+
+    visibility: visible!important;
+}
+
+.visibility-ong-false{
+
+    visibility: hidden;
+}
+
+
+.visibility-salvo{
+
+    visibility: visible!important;
+}
+
+.visibility-salvo-false{
+
+    visibility: hidden;
+}
+
+
+
+.visibility-menu{
+
+    visibility: visible!important;
+}
+
+.visibility-menu-false{
+
+    visibility: hidden;
+}
+
+
+
+.visibility-noti{
+
+    visibility: visible!important;
+}
+
+.visibility-noti-false{
+
+    visibility: hidden;
+}
+
+
+.visibility-chat{
+
+    visibility: visible!important;
+}
+
+.visibility-chat-false{
+
+    visibility: hidden;
+}
+
+
+

@@ -1,0 +1,71 @@
+<div class="css-selector">
+    <div class="container-fluid ">
+        <div class="row bgdient">
+            <div class="col-md-12 text-white">
+    
+                <h1 class="fs-54 text-center">Tema</h1>
+                <h5 class="fs-18 text-center">Cadastre um novo tema:</h5>
+
+
+                <div class="row d-flex justify-content-center mt-5 ml-5 w-100">
+                    <div class="col-md-7">
+    
+                        <div class=" form-goup d-flex justify-content-center mb-4 ">
+                             
+                            <div class="w-100">
+                                <input [(ngModel)]='tema.categoria' type="text" class="form-control radio fundoVerdinClarin" id="categoria"
+                                placeholder="Digite a categoria do tema" >
+                            </div>
+
+                        
+                                <button class="btn btn-outline-light btna-color bga-color radio ml-3"
+                                (click)='cadastrar()'>Cadastrar</button>
+
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    <div class="container-fluid ">
+        <div class="row ">
+            <div class="col-md-12 ">
+                <h2 class="text-center text-white">Todos meus temas: </h2>
+            </div>
+        </div>
+    
+        <div class="row mt-3 d-flex justify-content-center  ">
+            <div class="col-md-8 ">
+                <table class="table table-hover ">
+                    <table class="table fundoForms radios">
+                        <thead>
+                            <tr>
+                                <th scope="col">Tema: </th>
+                                <th scope="col" class="text-right">Modificações</th>
+    
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let item of listaTema">
+                                <td>{{item.categoria}}</td>
+                                <td class="d-flex justify-content-end mb-2">
+                                    <button class="btn lar mxr-7 radio fw-bold text-white"
+                                        [routerLink]="['/tema-edit',item.id]">Editar</button>
+                                    <button class="btn zul radio fw-bold text-white"
+                                        [routerLink]="['/tema-delete',item.id]">Apagar</button>
+                                </td>
+    
+                            </tr>
+    
+                        </tbody>
+                    </table>
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+</div>
